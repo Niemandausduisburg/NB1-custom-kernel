@@ -9,5 +9,7 @@ on:
 jobs:
   build:
   steps:
-    - name: build
-      run: build-kernel.sh
+    -run:
+    name: build
+        command: |
+          build-kernel.sh
