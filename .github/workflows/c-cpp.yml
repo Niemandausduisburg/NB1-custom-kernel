@@ -11,5 +11,4 @@ jobs:
   steps:
     -run:
     name: build
-        command: |
-          build-kernel.sh
+        command: build-kernel.sh
