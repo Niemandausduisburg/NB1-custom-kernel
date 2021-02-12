@@ -1,0 +1,21 @@
+rule KNINJA
+  command = ./kninja.py O=out ARCH=arm64 nb1_defconfig
+  generator = 1
+  pool = console
+build build.ninja: KNINJA $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/Kconfig $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/kninja.py $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/gconf.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/gconf.glade $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/kxgettext.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/checklist.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/inputbox.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/menubox.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/textbox.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/util.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/lxdialog/yesno.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/mconf.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/nconf.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/nconf.gui.c $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/qconf.cc $
+    /run/media/kevin/Daten/Kernel/NB1-custom-kernel/scripts/kconfig/streamline_config.pl
