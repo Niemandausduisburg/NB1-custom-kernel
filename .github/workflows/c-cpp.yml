@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ nb1-a11 ]
+  pull_request:
+    branches: [ nb1-a11 ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make config
+      run: make O=out ARCH=arm64 nb1_defconfig
+    - name: make
+      run: make O=out \
+    ARCH=arm64 \
+    LOCALVERSION=-gcc
+
+
