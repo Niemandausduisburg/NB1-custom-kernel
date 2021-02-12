@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ p-treble ]
+  pull_request:
+    branches: [ p-treble ]
+
+jobs:
+  build:
+
+    runs-on: Arch-Linux
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: make O=out ARCH=arm64 nb1_defconfig
+    - name: make
+      run: make -j$(nproc --all) O=out \ ARCH=arm64 \ LOCALVERSION=-gcc
