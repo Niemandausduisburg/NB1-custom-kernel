@@ -17,7 +17,7 @@ jobs:
       run: make O=out ARCH=arm64 nb1_defconfig
     - name: make
       run: make O=out \
-    ARCH=arm64 \
-    LOCALVERSION=-gcc
+    ARCH=arm64
+
 
 
