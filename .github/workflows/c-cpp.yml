@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ArchLinux
+    runs-on: Ubuntu
 
     steps:
     - uses: actions/checkout@v2
