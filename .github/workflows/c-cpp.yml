@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ nb1-a11 ]
+  pull_request:
+    branches: [ nb1-a11 ]
+
+jobs:
+  build:
+
+    runs-on: ArchLinux
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build-kernel
+      run: ./build-kernel.sh
