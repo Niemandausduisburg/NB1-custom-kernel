@@ -16,4 +16,4 @@ jobs:
     - name: build-kernel
       run: ./build-kernel.sh
     - name: package-kernel
-      run: ./package-kernel
+      run: ./package-kernel.sh
